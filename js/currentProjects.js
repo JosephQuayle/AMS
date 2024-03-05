@@ -44,7 +44,7 @@ let currentImages = [
 ];
 
 function showImage(index) {
-  let imgElement = document.getElementById("current-img");
+  let imgElement = document.getElementById("current-img-cathedral");
   imgElement.src = currentImages[index];
   currentImgIndex = index;
 }
