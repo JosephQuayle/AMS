@@ -2,15 +2,15 @@ let i = 0;
 let images = [];
 let time = 5000;
 
-images[0] = "../img/title2.png";
-images[1] = "../img/title3.png";
-images[2] = "../img/title4.png";
-images[3] = "../img/title5.png";
-images[4] = "../img/title6.png";
-images[5] = "../img/our_work1.png";
-images[6] = "../img/our_work3.png";
-images[7] = "../img/our_work8.png";
-images[8] = "../img/our_work9.png";
+images[0] = "./img/title2.png";
+images[1] = "./img/title3.png";
+images[2] = "./img/title4.png";
+images[3] = "./img/title5.png";
+images[4] = "./img/title6.png";
+images[5] = "./img/our_work1.png";
+images[6] = "./img/our_work3.png";
+images[7] = "./img/our_work8.png";
+images[8] = "./img/our_work9.png";
 
 function changeImg() {
   let slide = document.getElementById("slide");
