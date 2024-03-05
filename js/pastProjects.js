@@ -34,12 +34,12 @@ showPastDiv(pastDivIndex); // Initially show the first div
 //scrolls through images within forest project
 let pastImgIndexForest = 0;
 let pastImagesForest = [
-  "../img/completed1_image1.jpg",
-  "../img/completed1_image2.jpg",
-  "../img/completed1_image3.jpg",
-  "../img/completed1_image4.jpg",
-  "../img/completed1_image5.jpg",
-  "../img/completed1_image6.jpg",
+  "./img/completed1_image1.jpg",
+  "./img/completed1_image2.jpg",
+  "./img/completed1_image3.jpg",
+  "./img/completed1_image4.jpg",
+  "./img/completed1_image5.jpg",
+  "./img/completed1_image6.jpg",
 ];
 
 function showImageForest(index) {
@@ -67,12 +67,12 @@ rightArrowForest.addEventListener("click", function () {
 //scrolls through images within sheffcol project
 let pastImgIndexSheffcol = 0;
 let pastImagesSheffcol = [
-  "../img/completed2_image1.jpg",
-  "../img/completed2_image2.jpg",
-  "../img/completed2_image3.jpg",
-  "../img/completed2_image4.jpg",
-  "../img/completed2_image5.jpg",
-  "../img/completed2_image6.jpg",
+  "./img/completed2_image1.jpg",
+  "./img/completed2_image2.jpg",
+  "./img/completed2_image3.jpg",
+  "./img/completed2_image4.jpg",
+  "./img/completed2_image5.jpg",
+  "./img/completed2_image6.jpg",
 ];
 
 function showImageSheffcol(index) {
@@ -100,9 +100,9 @@ rightArrowSheffcol.addEventListener("click", function () {
 //scrolls through images within lyceum project
 let pastImgIndexCrucible = 0;
 let pastImagesCrucible = [
-  "../img/completed4_image1.jpg",
-  "../img/completed4_image2.jpg",
-  "../img/completed4_image3.jpg",
+  "./img/completed4_image1.jpg",
+  "./img/completed4_image2.jpg",
+  "./img/completed4_image3.jpg",
 ];
 
 function showImageCrucible(index) {
@@ -130,9 +130,9 @@ rightArrowCrucible.addEventListener("click", function () {
 //scrolls through images within RAF project
 let pastImgIndexRaf = 0;
 let pastImagesRaf = [
-  "../img/completed5_image1.jpg",
-  "../img/completed5_image2.jpg",
-  "../img/completed5_image3.jpg",
+  "./img/completed5_image1.jpg",
+  "./img/completed5_image2.jpg",
+  "./img/completed5_image3.jpg",
 ];
 
 function showImageRaf(index) {
@@ -159,12 +159,12 @@ rightArrowRaf.addEventListener("click", function () {
 //scrolls through images within RAF project
 let pastImgIndexHadfield = 0;
 let pastImagesHadfield = [
-  "../img/completed6_image1.jpg",
-  "../img/completed6_image2.jpg",
-  "../img/completed6_image3.jpg",
-  "../img/completed6_image4.jpg",
-  "../img/completed6_image5.jpg",
-  "../img/completed6_image6.jpg",
+  "./img/completed6_image1.jpg",
+  "./img/completed6_image2.jpg",
+  "./img/completed6_image3.jpg",
+  "./img/completed6_image4.jpg",
+  "./img/completed6_image5.jpg",
+  "./img/completed6_image6.jpg",
 ];
 
 function showImageHadfield(index) {
@@ -192,9 +192,9 @@ rightArrowHadfield.addEventListener("click", function () {
 //scrolls through images within hicks project
 let pastImgIndexHicks = 0;
 let pastImagesHicks = [
-  "../img/completed7_image1.jpg",
-  "../img/completed7_image2.jpg",
-  "../img/completed7_image3.jpg",
+  "./img/completed7_image1.jpg",
+  "./img/completed7_image2.jpg",
+  "./img/completed7_image3.jpg",
 ];
 
 function showImageHicks(index) {
@@ -221,9 +221,9 @@ rightArrowHicks.addEventListener("click", function () {
 //scrolls through images within hicks project
 let pastImgIndexXeros = 0;
 let pastImagesXeros = [
-  "../img/completed8_image1.jpg",
-  "../img/completed8_image2.jpg",
-  "../img/completed8_image3.jpg",
+  "./img/completed8_image1.jpg",
+  "./img/completed8_image2.jpg",
+  "./img/completed8_image3.jpg",
 ];
 
 function showImageXeros(index) {

@@ -34,13 +34,13 @@ showDiv(currentDivIndex); // Initially show the first div
 
 let currentImgIndex = 0;
 let currentImages = [
-  "../img/current1_image1.jpg",
-  "../img/current1_image2.jpg",
-  "../img/current1_image3.jpg",
-  "../img/current1_image4.jpg",
-  "../img/current1_image5.jpg",
-  "../img/current1_image6.jpg",
-  "../img/current1_image7.jpg",
+  "./img/current1_image1.jpg",
+  "./img/current1_image2.jpg",
+  "./img/current1_image3.jpg",
+  "./img/current1_image4.jpg",
+  "./img/current1_image5.jpg",
+  "./img/current1_image6.jpg",
+  "./img/current1_image7.jpg",
 ];
 
 function showImage(index) {
@@ -67,12 +67,12 @@ rightArrowCathedral.addEventListener("click", function () {
 //scrolls through images within endcliffe crescent project
 let currentImgIndexEndcliffe = 0;
 let currentImagesEndcliffe = [
-  "../img/current2_image1.jpg",
-  "../img/current2_image2.jpg",
-  "../img/current2_image3.jpg",
-  "../img/current2_image4.jpg",
-  "../img/current2_image5.jpg",
-  "../img/current2_image6.jpg",
+  "./img/current2_image1.jpg",
+  "./img/current2_image2.jpg",
+  "./img/current2_image3.jpg",
+  "./img/current2_image4.jpg",
+  "./img/current2_image5.jpg",
+  "./img/current2_image6.jpg",
 ];
 
 function showImageEndcliffe(index) {
@@ -101,12 +101,12 @@ rightArrowEndcliffe.addEventListener("click", function () {
 //scrolls through images within our offices project
 let currentImgIndexOurs = 0;
 let currentImagesOurs = [
-  "../img/current3_image1.jpg",
-  "../img/current3_image2.jpg",
-  "../img/current3_image3.jpg",
-  "../img/current3_image4.jpg",
-  "../img/current3_image5.jpg",
-  "../img/current3_image6.jpg",
+  "./img/current3_image1.jpg",
+  "./img/current3_image2.jpg",
+  "./img/current3_image3.jpg",
+  "./img/current3_image4.jpg",
+  "./img/current3_image5.jpg",
+  "./img/current3_image6.jpg",
 ];
 
 function showImageOurs(index) {
