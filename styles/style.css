@@ -453,6 +453,14 @@ li {
   border: none;
   border-radius: 5px;
   font-size: 2rem;
+  z-index: 500000;
+}
+
+#current-projects-button-left:hover,
+#current-projects-button-right:hover,
+#past-projects-button-right:hover,
+#past-projects-button-left:hover {
+  background-color: rgb(41, 143, 109);
 }
 
 .flex-2-col :nth-child(2) {
@@ -879,6 +887,19 @@ footer {
 
   .service-content {
     width: 100%;
+  }
+
+  .clicked {
+    align-items: end;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  #current-projects-button-left,
+  #current-projects-button-right,
+  #past-projects-button-right,
+  #past-projects-button-left {
+    margin-bottom: 2rem;
   }
 }
 
