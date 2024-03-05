@@ -98,6 +98,39 @@ rightArrowSheffcol.addEventListener("click", function () {
 });
 
 //scrolls through images within lyceum project
+let pastImgIndexLyceum = 0;
+let pastImagesLyceum = [
+  "./img/completed3_image1.jpg",
+  "./img/completed3_image2.jpg",
+  "./img/completed3_image3.jpg",
+  "./img/completed3_image4.jpg",
+  "./img/completed3_image5.jpg",
+  "./img/completed3_image6.jpg",
+];
+
+function showImageLyceum(index) {
+  let imgElementLyceum = document.getElementById("past-img-lyceum");
+  imgElementLyceum.src = pastImagesLyceum[index];
+  pastImgIndexLyceum = index;
+}
+
+let leftArrowLyceum = document.getElementById("left-arrow-lyceum");
+leftArrowLyceum.addEventListener("click", function () {
+  console.log("clicked left arrow Lyceum");
+  pastImgIndexLyceum =
+    (pastImgIndexLyceum - 1 + pastImagesLyceum.length) %
+    pastImagesLyceum.length;
+  showImageLyceum(pastImgIndexLyceum);
+});
+
+let rightArrowLyceum = document.getElementById("right-arrow-lyceum");
+rightArrowLyceum.addEventListener("click", function () {
+  console.log("clicked right arrow Lyceum");
+  pastImgIndexLyceum = (pastImgIndexLyceum + 1) % pastImagesLyceum.length;
+  showImageLyceum(pastImgIndexLyceum);
+});
+
+//scrolls through images within crucible project
 let pastImgIndexCrucible = 0;
 let pastImagesCrucible = [
   "./img/completed4_image1.jpg",
@@ -156,7 +189,7 @@ rightArrowRaf.addEventListener("click", function () {
   showImageRaf(pastImgIndexRaf);
 });
 
-//scrolls through images within RAF project
+//scrolls through images within hadfield project
 let pastImgIndexHadfield = 0;
 let pastImagesHadfield = [
   "./img/completed6_image1.jpg",
@@ -218,7 +251,7 @@ rightArrowHicks.addEventListener("click", function () {
   showImageHicks(pastImgIndexHicks);
 });
 
-//scrolls through images within hicks project
+//scrolls through images within xeros project
 let pastImgIndexXeros = 0;
 let pastImagesXeros = [
   "./img/completed8_image1.jpg",
