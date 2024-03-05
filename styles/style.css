@@ -460,9 +460,14 @@ li {
 }
 
 #current-img-endcliffe,
+#current-img-cathedral,
 #past-img-forest,
 #past-img-hadfield,
-#past-img-sheffcol {
+#past-img-sheffcol,
+#past-img-crucible,
+#past-img-raf,
+#past-img-hicks,
+#past-img-xeros {
   width: 70%;
   margin: 0 auto;
 }
