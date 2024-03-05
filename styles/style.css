@@ -886,8 +886,9 @@ footer {
     font-size: 1.4rem;
   }
 
-  .description {
-    margin-bottom: 5rem;
+  .description,
+  .our-offices {
+    margin-bottom: 7rem;
   }
 
   .service-content {
