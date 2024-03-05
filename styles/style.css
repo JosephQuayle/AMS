@@ -885,6 +885,10 @@ footer {
     font-size: 1.4rem;
   }
 
+  .description {
+    margin-bottom: 5rem;
+  }
+
   .service-content {
     width: 100%;
   }
@@ -899,7 +903,7 @@ footer {
   #current-projects-button-right,
   #past-projects-button-right,
   #past-projects-button-left {
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
   }
 }
 
