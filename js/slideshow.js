@@ -55,4 +55,11 @@ function fadeOut(slide, callback) {
   }, 20);
 }
 
-window.onload = changeImg;
+// window.onload = changeImg;
+
+window.onload = function () {
+  let slide = document.getElementById("slide");
+  slide.style.display = "block"; // Show the image container
+
+  changeImg(); // Start the slideshow
+};
