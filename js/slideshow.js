@@ -33,6 +33,7 @@ function changeImg() {
 
 function fadeIn(slide) {
   slide.style.opacity = 0;
+  slide.style.display = "block";
   let opacity = 0;
   let timer = setInterval(function () {
     if (opacity >= 1) {
@@ -58,20 +59,7 @@ function fadeOut(slide, callback) {
 // window.onload = changeImg;
 
 window.onload = function () {
-  for (let j = 0; j < images.length; j++) {
-    let img = new Image();
-    img.src = images[j];
-  }
-
   let slide = document.getElementById("slide");
 
   changeImg(); // Start the slideshow
-
-  //only show the slideshow element when the first image opacity > 0
-  // Use setTimeout to check opacity after fadeIn animation has affected it
-  setTimeout(() => {
-    if (parseFloat(slide.style.opacity) > 0) {
-      slide.style.display = "block"; // Show the image container
-    }
-  }, 0.001); // Adjust delay based on fade-in speed
 };
