@@ -1,6 +1,5 @@
 let i = 0;
 let images = [];
-let preloadedImages = []; // Store preloaded images
 let time = 5000;
 
 images[0] = "./img/title2.png";
@@ -13,35 +12,23 @@ images[6] = "./img/our_work3.png";
 images[7] = "./img/our_work8.png";
 images[8] = "./img/our_work9.png";
 
-// Preload images before starting the slideshow
-function preloadImages(callback) {
-  let loadedCount = 0;
-
-  for (let j = 0; j < images.length; j++) {
-    preloadedImages[j] = new Image();
-    preloadedImages[j].src = images[j];
-
-    preloadedImages[j].onload = function () {
-      loadedCount++;
-      if (loadedCount === images.length) {
-        callback(); // Start slideshow once all images are loaded
-      }
-    };
-  }
-}
-
 function changeImg() {
   let slide = document.getElementById("slide");
 
   fadeOut(slide, function () {
-    slide.src = preloadedImages[i].src;
+    // Set the next image
+    slide.src = images[i];
 
-    i = (i + 1) % preloadedImages.length; // Loop back to the first image
+    if (i < images.length - 1) {
+      i++;
+    } else {
+      i = 0;
+    }
 
     fadeIn(slide);
   });
 
-  setTimeout(changeImg, time);
+  setTimeout("changeImg()", time);
 }
 
 function fadeIn(slide) {
@@ -52,8 +39,8 @@ function fadeIn(slide) {
       clearInterval(timer);
     }
     slide.style.opacity = opacity;
-    opacity += 0.05;
-  }, 20);
+    opacity += 0.05; // Adjust the increment to control fade speed
+  }, 20); // Adjust the interval to control fade smoothness
 }
 
 function fadeOut(slide, callback) {
@@ -68,9 +55,23 @@ function fadeOut(slide, callback) {
   }, 20);
 }
 
-window.onload = function () {
-  let slide = document.getElementById("slide");
-  slide.style.display = "block"; // Show the image container
+// window.onload = changeImg;
 
-  preloadImages(changeImg); // Ensure all images are loaded before starting slideshow
+window.onload = function () {
+  for (let j = 0; j < images.length; j++) {
+    let img = new Image();
+    img.src = images[j];
+  }
+
+  let slide = document.getElementById("slide");
+
+  changeImg(); // Start the slideshow
+
+  //only show the slideshow element when the first image opacity > 0
+  // Use setTimeout to check opacity after fadeIn animation has affected it
+  setTimeout(() => {
+    if (parseFloat(slide.style.opacity) > 0) {
+      slide.style.display = "block"; // Show the image container
+    }
+  }, 200); // Adjust delay based on fade-in speed
 };
