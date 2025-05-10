@@ -58,6 +58,11 @@ function fadeOut(slide, callback) {
 // window.onload = changeImg;
 
 window.onload = function () {
+  for (let j = 0; j < images.length; j++) {
+    let img = new Image();
+    img.src = images[j];
+  }
+
   let slide = document.getElementById("slide");
   slide.style.display = "block"; // Show the image container
 
