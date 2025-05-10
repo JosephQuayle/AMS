@@ -118,18 +118,18 @@ li {
 }
 
 #about,
-#our-associations {
+.our-associations {
   text-align: center;
   margin-top: 8.5rem;
   margin-bottom: 5rem;
 }
 
-#our-associations {
+.our-associations {
   margin-top: 0rem;
 }
 
 #about,
-#our-associations,
+.our-associations,
 .services-section h2,
 .projects-section h2,
 .current-text h3,
@@ -890,6 +890,10 @@ footer {
   .description,
   .our-offices {
     margin-bottom: 7rem;
+  }
+
+  .office-last-para {
+    padding-bottom: 4rem;
   }
 
   .service-content {
