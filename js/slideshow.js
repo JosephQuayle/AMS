@@ -1,5 +1,6 @@
 let i = 0;
 let images = [];
+let preloadedImages = []; // Store preloaded images
 let time = 5000;
 
 images[0] = "./img/title2.png";
@@ -12,23 +13,35 @@ images[6] = "./img/our_work3.png";
 images[7] = "./img/our_work8.png";
 images[8] = "./img/our_work9.png";
 
+// Preload images before starting the slideshow
+function preloadImages(callback) {
+  let loadedCount = 0;
+
+  for (let j = 0; j < images.length; j++) {
+    preloadedImages[j] = new Image();
+    preloadedImages[j].src = images[j];
+
+    preloadedImages[j].onload = function () {
+      loadedCount++;
+      if (loadedCount === images.length) {
+        callback(); // Start slideshow once all images are loaded
+      }
+    };
+  }
+}
+
 function changeImg() {
   let slide = document.getElementById("slide");
 
   fadeOut(slide, function () {
-    // Set the next image
-    slide.src = images[i];
+    slide.src = preloadedImages[i].src;
 
-    if (i < images.length - 1) {
-      i++;
-    } else {
-      i = 0;
-    }
+    i = (i + 1) % preloadedImages.length; // Loop back to the first image
 
     fadeIn(slide);
   });
 
-  setTimeout("changeImg()", time);
+  setTimeout(changeImg, time);
 }
 
 function fadeIn(slide) {
@@ -39,8 +52,8 @@ function fadeIn(slide) {
       clearInterval(timer);
     }
     slide.style.opacity = opacity;
-    opacity += 0.05; // Adjust the increment to control fade speed
-  }, 20); // Adjust the interval to control fade smoothness
+    opacity += 0.05;
+  }, 20);
 }
 
 function fadeOut(slide, callback) {
@@ -55,16 +68,9 @@ function fadeOut(slide, callback) {
   }, 20);
 }
 
-// window.onload = changeImg;
-
 window.onload = function () {
-  for (let j = 0; j < images.length; j++) {
-    let img = new Image();
-    img.src = images[j];
-  }
-
   let slide = document.getElementById("slide");
   slide.style.display = "block"; // Show the image container
 
-  changeImg(); // Start the slideshow
+  preloadImages(changeImg); // Ensure all images are loaded before starting slideshow
 };
