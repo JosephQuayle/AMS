@@ -73,5 +73,5 @@ window.onload = function () {
     if (parseFloat(slide.style.opacity) > 0) {
       slide.style.display = "block"; // Show the image container
     }
-  }, 200); // Adjust delay based on fade-in speed
+  }, 0); // Adjust delay based on fade-in speed
 };
