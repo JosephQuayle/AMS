@@ -915,6 +915,21 @@ footer {
 }
 
 @media only screen and (max-width: 486px) {
+  p {
+    font-size: 1.5rem !important;
+  }
+
+  .sub-nav-p {
+    font-size: 2rem !important;
+  }
+
+  #mobNav {
+    padding: 0;
+  }
+
+  .sub-nav {
+    margin-top: 7.5rem;
+  }
   .slide-show {
     display: none;
   }
